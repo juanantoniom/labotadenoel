@@ -1,0 +1,1107 @@
+@font-face {
+  font-family: OpenSans;
+  src: url("fuentes/OpenSans/OpenSans-Light.ttf");
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+/*******HEADER  ******/
+header{
+  width: 100%;
+  background-color: SkyBlue;
+  height: 130px;
+
+}
+.miClear{
+  clear: both;
+}
+
+
+
+header div img{
+  float: right;
+  width: 100px;
+
+}
+header div .verCarrito{
+  float: right;
+  width: 100px;
+
+
+}
+
+.miClearleft{
+  clear:left;
+}
+header div p{
+  float: right;
+  margin-right: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  width: 15px;
+
+}
+
+/* .carrito{
+
+
+float: right;
+width: 40px;
+height: 40px;
+
+} */
+.imagen_usuario{
+
+  /* margin-top: 50px; */
+  /* margin-right:  100px; */
+  /* margin-top: -20px; */
+  margin-top: 75px;
+  margin-right: 100px;
+  width: 50px;
+  float:right;
+
+}
+
+/*
+header p{
+  float: right;
+  margin-top: 80px;
+  font-size: 30px;
+  font-family: arial;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  background-color: #0088ccff;
+  color:white;
+  border: 1px solid #0088ccff;
+  border-radius: 5px;
+
+
+
+}*/
+.container_inicia{
+  float: right;
+  margin-top: 75px;
+  /* margin-top: 75px;
+  margin-right: 10px;
+  margin-bottom: 0px; */
+  /* margin-top: -20px; */
+
+
+
+}
+.container_inicia a{
+
+  cursor: pointer;
+  font-size: 25px;
+  color:white;
+  line-height:40px;
+  margin-bottom: 0px;
+  padding: 5px;
+  text-align: center;
+
+  background-color: #0088cc;
+  border: 1px solid #0088cc;
+  border-radius: 5px;
+
+
+}
+
+.administrarForm{
+  position:absolute; /* IMPORTANTE usamos position absolute para que se quede ahi fijo el boton y asi al hacer scrool no se mueva , como pasaba con position:fixed*/
+  width: 110px;
+  margin-left: 50%;
+
+}
+
+
+ /* .administrar{
+   margin-top: 30px;
+   margin-left: 200px;
+   float:left; */
+  /* display: flex;
+  justify-content: center;
+   */
+  /* display: inline-block;
+  margin-left: 500px;
+  margin-top: 80px; */
+
+
+/* } */
+
+
+
+
+
+
+.logo a{
+  text-decoration: none;
+  color: #000000;
+  float:left;
+  font-size: 40px;
+  font-family: OpenSans;
+  margin-left: 40px;
+  margin-top: 40px;
+
+  text-shadow: 5px 2px 15px;
+}
+.logo a:hover{
+  text-shadow: 5px 2px 29px;
+}
+
+
+
+
+/*** navbar */
+
+.container{
+  width: 50%;
+
+}
+
+.nav-item > a{
+  font-size: 1.5em;
+
+}
+
+.nav-item > a > img{
+  width: 50px;
+  height: 50px;
+}
+
+.nav-item > a > svg{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+.navbar,.navitem,.nav-link { /*fijar el navbar y los enlaces para que no se mueva hacia abajo */
+  height: 80px;
+}
+
+.nav-item{
+  position:relative;/* le ponemos position relative porque siempre tiene que tenerlo el elemento padre para que funcione el ::before en el hijo con position:absolute;*/
+
+  /*transition: all .3s ease-in-out;*/
+}
+
+.nav-link::before{
+  content:'';
+  position: absolute;  /* para que funcione position absolute el elemento padre del .nav-link debe tener position: relative;*/
+  left:0;
+  right: 0;
+  bottom: 0;
+
+  border-color: linear-gradient(#e66465, #9198e5);
+  border: solid 4px;
+
+  transition: transform 300ms ease-in-out;
+  transform: scale(0);
+  /*transform-origin: left;*/
+}
+.nav-link:hover::before{
+  transform: scaleX(1);
+}
+
+
+
+/***** carousel  *******/
+
+
+
+.carousel-control-next{ /* para que podamos hacer click en el boton de Registrate*/
+  position: absolute;
+  z-index: 0;
+}
+
+/* .carousel-inner > .carousel-item > a > img{
+  height: 100%;
+
+} */
+.carousel-inner{
+  height: 300px;
+}
+/****contenido principal****/
+
+.main{
+width: 50%;
+margin:0 auto;
+
+}
+
+
+
+
+
+.card{
+  border: 1px solid red;
+  width: 25%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+
+}
+.card-img-top{
+  height: 200px;
+  /* width: 235px; */
+  width: 100%; /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+}
+
+.mipaginacion{
+
+  margin: 0 auto; /* si no ponemos el width no funciona el margin 0 auto */
+  margin-top: 20px;
+   width: 29%;
+}
+
+
+/*** footer ****/
+
+footer{
+
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: SkyBlue;
+
+
+}
+footer p:last-child a{
+  font-family: arial;
+  font-size: 1.3rem;
+  color: black;
+  text-decoration: none;
+
+}
+footer p{
+  font-family: arial;
+  font-size: 1.3rem;
+  color: black;
+  display: inline-block;
+
+}
+footer p:first-child{
+  float: left;
+  width: 30%;
+  padding-left: 30px;
+}
+footer p:last-child{
+
+  text-align: center;
+
+  width: 30%;
+
+}
+/**  views/home/arboles.php **/
+#paginationArboles{
+
+  margin-left: 15%;
+}
+/**  views/home/luces.php **/
+#paginationLuces{
+
+  margin-left: 15%;
+}
+/**  views/home/adornos.php **/
+#paginationAdornos{
+
+  margin-left: 15%;
+}
+/**  views/home/belenes.php **/
+#paginationBelenes{
+
+  margin-left: 15%;
+}
+/**  views/home/postales.php **/
+#paginationPostales{
+
+  margin-left: 15%;
+}
+
+/*  views/home/quienesSomos.php ****quienesSomos.PHP****   */
+.Caja_quienesSomos{
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 450px;
+}
+
+
+/*  views/user/registro.php ****REGISTRO.PHP****   */
+
+.registernewuser{
+  text-align: center;
+  margin-top:  50px;
+  margin-bottom: 50px;
+}
+
+.miRegistro{
+
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 250px;
+
+
+
+}
+.alertasRegistro{
+  color:red;
+  opacity: 70%;
+}
+/*  views/user/login.php ****REGISTRO.PHP****   */
+
+.spanError{
+  color:red;
+  opacity: 70%;
+}
+
+
+/*** views/productos/administrarProductos.php  PAGINA DEL BOTON ADMINISTRAR ****/
+
+/*** views/pedido/administrarPedidos.php  PAGINA DEL BOTON ADMINISTRAR ****/
+.tablePedidos{
+  width: 50%;
+}
+
+/***** views/home/detalles.php ************ Pagina detalles del producto ****/
+.cajaDetalle{
+  width:300px;
+
+  margin: 0 auto;
+}
+
+.cajaDetalle img{
+  height: 500px;
+  border-radius: 20px;
+}
+.cajaDetalle a{
+  margin-bottom: 20px;
+}
+
+/****** views/carrito/carrito.php ***************pagina del carrito tabla***/
+.carritoh2{
+
+  text-align: center;
+
+}
+
+.cajaCarrito{
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 25%;
+}
+.imagenCarrito{
+  width: 100px;
+  height: 100px;
+}
+
+
+.totalCarrito{
+  display: block;
+  float: right;
+  width:200px;
+}
+.borrarCarrito{
+  float: left;
+  margin-top: 40px;
+}
+
+/******views/user/usuarioInfo_muestraDatosEnvio.php ******/
+.datosEnvio{
+  text-align: center;
+
+}
+
+
+/********views/pedido/pedidoGuardado.php********/
+
+h6{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 100px;
+}
+.buttonPay{
+    display: block;
+    width: 100px;
+    margin: 0 auto;  /***** para que funcone hay que meter display:  block              **/
+    margin-bottom: 371px;
+}
+
+/******   views/pedido/pedidoEnviado.php        *********/
+.pedidoEnviado{
+  text-align: center;
+}
+
+.imagenEnviado{
+  width: 20%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 95px;
+}
+.imprimirFactura{
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+}
+/**** views/user/usuarioInfo_muestraDatosEnvio.php  ***/
+
+.debes{
+
+  text-align: center;
+  margin-bottom: 488px;
+
+}
+/**** views/home/preguntasFrecuentes.php***/
+.container_faq{
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 488px;
+}
+.active{
+  height: 200px;
+}
+.container_pregunta{
+  border: solid 2px red;
+  border-radius: 10px;
+
+}
+
+.container_pregunta h4{
+  border-bottom: solid 2px red;
+  padding: 10px;
+}
+.flecha_pregunta{
+  float: right;
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+
+}
+.acordeon{
+  display: none;
+
+}
+.animacion_flecha_up{
+  animation: flecha_360_up 1s;
+  animation-fill-mode: forwards;
+}
+.animation_flecha_up_fija{
+  animation: flecha_360_up;
+  animation-fill-mode: forwards;
+}
+.animation_flecha_down_fija{
+  animation: flecha_360_up;
+  animation-fill-mode: forwards;
+}
+.animacion_flecha_down{
+  animation: flecha_360_down 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes flecha_360_up {
+  from { transform: rotate(0deg);}
+  to {transform: rotate(180deg);}
+}
+@keyframes flecha_360_down {
+  from { transform: rotate(180deg);}
+  to {transform: rotate(0deg);}
+}
+
+
+/***RESPONSIVE**/
+/* desde 0 px hasta el max-width que le indiquemos se ejecutara estos estilos css */
+/*navbar */
+
+ @media (max-width:1769px){
+   .container{
+     width: 100%;
+     height: 100%;
+
+   }
+   .nav-item > a{
+     font-size: 30px;
+
+   }
+
+   .nav-item > a > img{
+     width: 40px;
+     height: 40px;
+   }
+
+   .nav-item > a > svg{
+     width: 10px;
+     height: 20px;
+   }
+}
+
+/*/****contenido principal , boton administrar****/
+@media (max-width:1381px){
+
+  .main{
+    width: 70%;
+    margin: 0 auto;
+  }
+
+
+  .card{
+    border: 1px solid red;
+
+    float: left;
+
+    margin-top: 20px;
+
+
+  }
+  .card-img-top{
+    height: 200px;
+
+    width: 100%;                                       /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+  }
+
+
+}
+
+/* moviendo la paginacion  y ajustando el ancho de la seccion principal  */
+@media (max-width:1156px){
+  .mipaginacion{
+
+    margin: 0 auto; /* si no ponemos el width no funciona el margin 0 auto */
+    margin-top: 20px;
+     width: 32%;
+  }
+
+
+  /**  contenido principal   */
+  .main{
+    width: 70%;
+    margin:0 auto;
+
+  }
+
+
+  .card{
+    border: 1px solid red;
+
+    float: left;
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+  }
+  .card-img-top{
+    height: 200px;
+
+    width: 100%;                                       /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+  }
+
+
+}
+/* view/pedido/administrarPedidos.php  */
+@media (max-width:1039px){
+  .tablePedidos{
+     font-size: 10px;
+  }
+
+}
+
+
+/*navbar */
+@media (max-width:1016px){
+  .container{
+    width: 100%;
+    height: 100%;
+
+  }
+  .nav-item > a{
+    font-size: 30px;
+
+  }
+
+  .nav-item > a > img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-item > a > svg{
+    width: 10px;
+    height: 20px;
+  }
+}
+
+/* navbar  */
+@media (max-width:1000px){
+
+  /* navbar  */
+  .container{
+    width: 100%;
+    height: 100%;
+
+  }
+  .nav-item > a{
+    font-size: 20px;
+
+  }
+
+  .nav-item > a > img{
+    width: 30px;
+    height: 40px;
+  }
+
+  .nav-item > a > svg{
+    width: 10px;
+    height: 10px;
+  }
+  /***** views/home/detalles.php ************ Pagina detalles del producto ****/
+  .cajaDetalle{
+    width:400px;
+
+    margin: 0 auto;
+  }
+
+  .cajaDetalle img{
+    height: 300px;
+    border-radius: 20px;
+  }
+  .cajaDetalle button{
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+}
+/* contenido principal */
+@media (max-width:964px) {
+
+  /****contenido principal****/
+
+  .main{
+    width: 100%;
+
+
+  }
+
+
+
+
+
+  .card{
+    border: 1px solid red;
+
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+  }
+  .card-img-top{
+    height: 200px;
+    /* width: 235px; */
+    width: 100%; /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+  }
+
+
+}
+
+/* navbar   y    imagen carrito  con parrafo ver carrtio  y boton iniciar sesion*/
+@media (max-width:850px) {
+  /*  imagen carrito  con parrafo ver carrtio */
+  header div img{
+    float: right;
+    width: 50px;
+
+  }
+  header div .verCarrito{
+    float: right;
+    width: 80px;
+
+
+  }
+
+
+
+  /* navbar  */
+  .container{
+    width: 100%;
+    height: 100%;
+
+  }
+  .nav-item > a{
+    font-size: 20px;
+
+  }
+
+  .nav-item > a > img{
+    width: 20px;
+    height: 30px;
+  }
+
+  .nav-item > a > svg{
+    width: 10px;
+    height: 10px;
+  }
+/*   logo   */
+
+.logo a{
+  text-decoration: none;
+  color: #000000;
+  float:left;
+  font-size: 30px;
+  font-family: OpenSans;
+  margin-left: 40px;
+  margin-top: 40px;
+
+  text-shadow: 5px 2px 15px;
+}
+/* .logo a:hover{
+  text-shadow: 5px 2px 29px;
+} */
+
+
+/* imagen usuario  */
+.imagen_usuario{
+
+
+  margin-top: 75px;
+  margin-right: 10px;
+  width: 50px;
+  float:right;
+
+}
+
+/*boton iniciar sesion*/
+/* .container_inicia{
+  float: right;
+  margin-top: 75px;
+
+
+
+
+} */
+ /* .container_inicia a{
+
+  cursor: pointer;
+  font-size: 25px;
+  color:white;
+  line-height:40px;
+  margin-bottom: 0px;
+  padding: 5px;
+  text-align: center;
+
+  background-color: #0088cc;
+  border: 1px solid #0088cc;
+  border-radius: 5px;
+
+
+} */
+footer p:last-child{
+
+  text-align: center;
+
+  width: 30%;
+  margin-left: 50px;
+}
+
+
+}
+
+@media (max-width:772px) {
+
+  /* navbar  */
+  .container{
+    width: 100%;
+
+
+  }
+  .nav-item > a{
+    font-size: 15px;
+
+  }
+
+  .nav-item > a > img{
+    width: 10px;
+    height: 30px;
+  }
+
+  .nav-item > a > svg{
+    width: 10px;
+    height: 10px;
+  }
+
+
+}
+/** footer  */
+@media (max-width:704px){
+  /** footer  */
+  footer{
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+    background: SkyBlue;
+
+
+  }
+
+  .totalCarrito h3{
+    font-size: 20px;
+    margin-left: 50%;
+  }
+  .totalCarrito form{
+    width: 20%;
+    margin-left: 70%;
+  }
+  .borrarCarrito{
+    float: left;
+    width: 20%;
+    font-size: 10px;
+  }
+
+}
+/* imagen usuario ,contenido principal ,paginacion  , boton inicia sesion */
+@media (max-width: 614px){
+  /* imagen usuario  */
+  .imagen_usuario{
+
+
+    margin-top: 75px;
+    margin-right: -30px;
+    width: 35px;
+
+
+  }
+  /*    contenido principal              */
+  .main{
+    width: 100%;
+
+
+  }
+
+  .card{
+    border: 1px solid red;
+
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+  }
+  .card-img-top{
+    height: 200px;
+    /* width: 235px; */
+    width: 100%; /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+  }
+  /* paginacion */
+  .mipaginacion{
+
+    margin: 0 auto; /* si no ponemos el width no funciona el margin 0 auto */
+    margin-top: 20px;
+     width: 55%;
+  }
+
+  /* boton inicia sesion */
+  .container_inicia a{
+
+    cursor: pointer;
+    font-size: 15px;
+    color:white;
+    line-height:40px;
+    margin-bottom: 0px;
+    padding: 5px;
+    text-align: center;
+
+    background-color: #0088cc;
+    border: 1px solid #0088cc;
+    border-radius: 5px;
+
+
+  }
+
+
+}
+/*  navbar */
+@media (max-width:538px){
+
+  /* navbar  */
+  .container{
+    width:100%;
+  }
+  .nav-item{
+    width: 50px;
+
+  }
+  .nav-item > a{
+    font-size: 10px;
+
+  }
+
+  .nav-item > a > img{
+    width: 20px;
+    height: 30px;
+  }
+
+  .nav-item > a > svg{
+    width: 5px;
+    height: 10px;
+  }
+
+}
+/* inicia sesion  y logo  y caja cajaCarrito*/
+@media (max-width:506px){
+  /*   logo   */
+
+  .logo a{
+    text-decoration: none;
+    color: #000000;
+    float:left;
+    font-size: 20px;
+    font-family: OpenSans;
+    margin-left: 10px;
+    margin-top: 40px;
+
+    text-shadow: 5px 2px 15px;
+  }
+  .carritoh2{
+    font-size: 20px;
+  }
+  .cajaCarrito{
+    font-size: 10px;
+
+  }
+  .totalCarrito{
+    width: 50px;
+  }
+  .totalCarrito h3{
+    font-size: 20px;
+
+  }
+  .totalCarrito form{
+    width: 20px;
+    float: right;
+  }
+  .borrarCarrito{
+    float: left;
+
+    font-size: 10px;
+  }
+}
+/* contenido principal */
+@media (max-width:480px){
+
+  /*    contenido principal              */
+  .main{
+    width: 100%;
+
+
+  }
+
+  .card{
+    border: 1px solid red;
+
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+  }
+  .card-img-top{
+    height: 200px;
+    /* width: 235px; */
+    width: 100%; /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+  }
+
+
+  /***** views/home/detalles.php ************ Pagina detalles del producto ****/
+  .cajaDetalle{
+    width:100px;
+
+    margin: 0 auto;
+  }
+
+  .cajaDetalle img{
+    height: 190px;
+    border-radius: 20px;
+  }
+  .cajaDetalle button{
+    margin-bottom: 20px;
+  }
+
+}
+/* contenido principal , paginacion*/
+@media (max-width:480px){
+  /*    contenido principal              */
+  .main{
+    width: 300px;
+
+
+  }
+
+  .card{
+    border: 1px solid red;
+    width: 100%;
+
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+
+  }
+  .card-img-top{
+    height: 200px;
+    /* width: 235px; */
+    width: 100%; /* le ponemos 100% para que pueda ser RESPONSIVE la imagen */
+  }
+
+  /* paginacion */
+  .mipaginacion{
+
+    margin: 0 auto; /* si no ponemos el width no funciona el margin 0 auto */
+    margin-top: 20px;
+     width: 75%;
+  }
+
+}
+/* boton inicia sesion , imagen usuario */
+@media (max-width:410px){
+
+  /* imagen usuario  */
+  .imagen_usuario{
+
+
+    margin-top: 75px;
+    margin-right: -50px;
+    width: 25px;
+
+
+  }
+
+
+  /* boton inicia sesion */
+
+  .container_inicia{
+    /* width: 30px; */
+  }
+  .container_inicia a{
+
+    cursor: pointer;
+    font-size: 5px;
+    color:white;
+    line-height:5px;
+
+
+
+    text-align: center;
+
+    background-color: #0088cc;
+    border: 1px solid #0088cc;
+    border-radius: 5px;
+
+
+  }
+
+}
